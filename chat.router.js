@@ -5,6 +5,20 @@ var router = io.Router();
 
 var handlers = require('./chat.handlers');
 
+/*!
+ * io.Router demonstration
+ *
+ * you can see here different styles of registering
+ * ..a route to the route.
+ *
+ *
+ * NOTE ABOUT Router.expect:
+ *
+ * Router.expect is an helper method that is used only to
+ * ..provide more documentation to the router.
+ * It is optional, and makes no changes to the real handler
+ * ..when used. Use it to specify expected params.
+ */
 // when the client emits 'add user', this listens and executes
 router
   .on('add user')
