@@ -9,6 +9,9 @@
     "url": "http://github.com/amit3vr"
   },
   "private": true,
+  "scripts": {
+    "start": "node app"
+  },
   "license": "BSD",
   "dependencies": {
     "express": "4.13.4",
