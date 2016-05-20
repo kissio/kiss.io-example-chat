@@ -3,8 +3,7 @@
 var io = require('kiss.io');
 var router = io.Router();
 
-var handlers = require('./handlers');
-
+var handlers = require('./chat.handlers');
 
 // when the client emits 'add user', this listens and executes
 router

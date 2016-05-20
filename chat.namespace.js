@@ -3,7 +3,7 @@
 var io      = require('kiss.io');
 
 var Chat    = new io.Namespace('/chat');
-var router  = require('./router');
+var router  = require('./chat.router');
 
 
 Chat.configure(function setLocals()
