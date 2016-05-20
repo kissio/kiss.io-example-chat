@@ -36,7 +36,7 @@ the chatroom.
 * ![acusti](https://avatars0.githubusercontent.com/u/517889?v=3&s=20) -- [Andrew Patton (acusti)](https://github.com/acusti)
 * ![nkzawa](https://avatars1.githubusercontent.com/u/775227?v=3&s=20) -- [Naoyuki Kanezawa (nkzawa)](https://github.com/nkzawa)
 
-**Adapted to [kiss.io](http://github.com/amit3vr/kiss.io) v0.3.0-alpha.1 by [Amit Evron](http://github/amit3vr)**.
+**Adapted to [kiss.io](http://github.com/amit3vr/kiss.io) v0.3.0-alpha.1 by [Amit Evron](http://github.com/amit3vr)**.
 
 #### LICENSE
 BSD
