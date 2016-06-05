@@ -1,6 +1,6 @@
-# kiss.io-example-chat # v0.1.0
+# kiss.io-example-chat # v0.1.1
 
-a really basic chat example of [kiss.io](http://github.com/amit3vr/kiss.io) that demonstrates at the most minimal level how to create a namespace, how to attach to it a router, and finally how to mount it onto the server. 
+a really basic chat example of [kiss.io](http://github.com/kissio/kiss.io) that demonstrates at the most minimal level how to create a namespace, how to attach to it a router, and finally how to mount it onto the server. 
 
 ---
 
