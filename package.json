@@ -2,16 +2,12 @@
   "name": "kiss.io-examples-chat",
   "version": "0.1.0",
   "description": "A simple chat client using kiss.io",
-  "main": "app.js",
-  "author":
-  {
+  "main": "server.js",
+  "author": {
     "name": "Amit Evron",
     "url": "http://github.com/amit3vr"
   },
   "private": true,
-  "scripts": {
-    "start": "node app"
-  },
   "license": "BSD",
   "dependencies": {
     "express": "4.13.4",
