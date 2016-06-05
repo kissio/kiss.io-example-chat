@@ -3,7 +3,7 @@
 var io = require('kiss.io');
 var router = io.Router();
 
-var handlers = require('./chat.handlers');
+var handlers = require('./handlers');
 
 /*!
  * io.Router demonstration

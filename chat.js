@@ -2,16 +2,16 @@
 
 var io      = require('kiss.io');
 
-var Chat    = new io.Namespace('/chat');
-var router  = require('./chat.router');
+var router  = require('./router');
+var chat    = io.Namespace('/chat');
 
 
-Chat.configure(function setLocals()
+chat.configure(function setLocals()
 {
   this.numUsers = 0;
 });
 
-Chat.configure(function registerEvents()
+chat.configure(function registerEvents()
 {
   // init routers with Router
   this.use(router);
@@ -26,4 +26,4 @@ Chat.configure(function registerEvents()
 /*!
  * Export Chat
  */
-module.exports = Chat;
+module.exports = chat;

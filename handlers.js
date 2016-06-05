@@ -2,11 +2,11 @@
 
 module.exports =
 {
-  onNewMessage: onNewMessage
-, onLogin: onLogin
-, onTyping: onTyping
-, onStopTyping: onStopTyping
-, onDisconnect: onDisconnect
+  onNewMessage: onNewMessage,
+  onLogin: onLogin,
+  onTyping: onTyping,
+  onStopTyping: onStopTyping,
+  onDisconnect: onDisconnect
 };
 
 
@@ -22,7 +22,7 @@ function onNewMessage(data)
 
 function onLogin(username)
 {
-  var Chat = this.nsp;
+  var chat = this.nsp;
   var socket = this.socket;
 
   if (socket.addedUser) return;
@@ -30,17 +30,17 @@ function onLogin(username)
   // we store the username in the socket session for this client
   socket.username = username;
 
-  ++Chat.numUsers;
+  ++chat.numUsers;
   socket.addedUser = true;
 
   socket.emit('login', {
-    numUsers: Chat.numUsers
+    numUsers: chat.numUsers
   });
 
   // echo globally (all clients) that a person has connected
   socket.broadcast('user joined', {
     username: socket.username,
-    numUsers: Chat.numUsers
+    numUsers: chat.numUsers
   });
 }
 
@@ -64,17 +64,17 @@ function onStopTyping()
 
 function onDisconnect()
 {
-  var Chat = this.nsp;
+  var chat = this.nsp;
   var socket = this.socket;
 
   if (socket.addedUser)
   {
-    --Chat.numUsers;
+    --chat.numUsers;
 
     // echo globally that this client has left
     socket.broadcast('user left', {
       username: socket.username,
-      numUsers: Chat.numUsers
+      numUsers: chat.numUsers
     });
   }
 }
