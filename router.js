@@ -22,7 +22,7 @@ var handlers = require('./handlers');
 // when the client emits 'add user', this listens and executes
 router
   .on('add user')
-  .expect(['username'])
+  .expects(['username'])
   .do(handlers.onLogin);
 
 // when the client emits 'new message', this listens and executes

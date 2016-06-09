@@ -1,9 +1,10 @@
 'use strict';
 
-var io      = require('kiss.io');
 
+var kiss    = require('kiss.io'),
+    io      = kiss();
 var router  = require('./router');
-var chat    = io.Namespace('/chat');
+var chat    = kiss.Namespace('/chat');
 
 
 chat.configure(function setLocals()
@@ -23,7 +24,4 @@ chat.configure(function registerEvents()
   });
 });
 
-/*!
- * Export Chat
- */
 module.exports = chat;
