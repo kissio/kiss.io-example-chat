@@ -3,20 +3,47 @@
 
 var express = require('express')
   , app     = express();
-var io      = require('kiss.io');
+var kiss    = require('kiss.io'),
+    io      = kiss();
 
-var chat    = require('./chat');
+var main    = io.namespace('/');
+var router  = require('./router');
 
-/*
- * Setup basic express server, serve web chat gui
- */
+
+//!
+// ----------- CHAT -------------
+//
+main.configure(function setLocals()
+{
+  this.numUsers = 0;
+});
+
+main.configure(function registerEvents()
+{
+  this.use(router);
+});
+
+main.on('connection', function(socket)
+{
+  console.log('hello %s', socket.id);
+});
+
+main.on('disconnection', function(socket)
+{
+  console.log('bye bye %s', socket.id);
+});
+
+
+//!
+// --------- EXPRESS APP ---------
+//
 app.use(express.static(__dirname + '/public'));
 
-/*
- * Start listening
- */
-io()
-.mount(chat)
+
+//!
+// --------- KISS.IO SERVER -------
+//
+io
 .attach(app)
 .listen(3000, function()
 {
