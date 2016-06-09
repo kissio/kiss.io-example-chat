@@ -16,12 +16,16 @@ chat.configure(function registerEvents()
 {
   // init routers with Router
   this.use(router);
+});
 
-  // or alternatively, setup route individually
-  this.reg('ping', function()
-  {
-    this.emit('pong');
-  });
+chat.on('connection', function(socket)
+{
+  console.log('hello %s', socket.id);
+});
+
+chat.on('disconnection', function(socket)
+{
+  console.log('bye bye %s', socket.id);
 });
 
 module.exports = chat;
