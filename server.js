@@ -45,7 +45,7 @@ app.use(express.static(__dirname + '/public'));
 //
 io
 .attach(app)
-.listen(3000, function()
+.listen(process.env.PORT || 3000, function()
 {
   console.log('Server listening at port 3000');
 });
