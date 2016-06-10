@@ -1,7 +1,7 @@
 'use strict';
 
-var io = require('kiss.io');
-var router = io.Router();
+var kiss = require('kiss.io');
+var router = kiss.Router();
 
 var handlers = require('./handlers');
 
