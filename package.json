@@ -1,6 +1,6 @@
 {
   "name": "kiss.io-examples-chat",
-  "version": "0.1.1",
+  "version": "1.0.1",
   "description": "A simple chat client using kiss.io",
   "main": "server.js",
   "author": {
@@ -11,6 +11,6 @@
   "license": "BSD",
   "dependencies": {
     "express": "4.13.4",
-    "kiss.io": "0.4.0-alpha.1"
+    "kiss.io": "0.5.2-alpha.1"
   }
 }
