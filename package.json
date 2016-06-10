@@ -11,6 +11,6 @@
   "license": "BSD",
   "dependencies": {
     "express": "4.13.4",
-    "kiss.io": "0.4.0-alpha.1"
+    "kiss.io": "0.5.0-alpha.1"
   }
 }
